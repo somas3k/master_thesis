@@ -1,0 +1,17 @@
+
+\chapter{Podsumowanie} \label{chap:conclusions}
+
+\section{Osiągnięte cele i obserwacje}
+Celem pracy było opracowanie rozwiązania, które będzie w stanie wspomagać decyzje w odlewni żeliwa ADI. Rozwiązanie opisane w pracy jest oparte na użyciu danych pochodzących z badań nad żeliwem ADI. Dane te zostały skrupulatnie zebrane z literatury i pozytywnie ocenione przez ekspertów. Następnie został opracowany algorytm służący do uzupełnienia brakujących danych, lecz jego późne ukończenie nie pozwoliło na zastosowanie zbiorów danych przez niego uzupełnionych.
+
+Zostały wybrane i zbadane 4 złożone algorytmy uczenia maszynowego: Random Forest, Multilayer Perceptron, Gradient Boosting i Ensemble Averaging. W wyniku przeprowadzonych badań zostały wytrenowane modele właściwości mechanicznych żeliwa ADI, a najlepszymi okazały się te wytrenowane za pomocą algorytmu Gradient Boosting.
+
+Następnie wytrenowane modele zostały użyte ewaluacji ograniczeń nakładanych przez normę. Przestrzeń rozwiązań dla dla metaheurystycznych algorytmów optymalizacji została stworzona w oparciu o zebrany zbiór danych. Zadanie optymalizacji zostało oparte o minimalizację funkcji, która została przedstawiona jako skalaryzacja ważona kryteriów kosztu i jakości. Rozwiązania musiały także spełniać wymagania ustanowione w normie opisującej istniejące gatunki żeliwa ADI. W pracy zostały przetestowane takie algorytmy jak Hill Climbing, Stochastic Hill Climbing, Metropolis Search, Tabu Search oraz Parallel Tempering. Analiza przeprowadzonych badań dostarczyła dwie konfiguracje algorytmów, które osiągnęły najlepsze wyniki: Tabu Search z tablica tabu o rozmiarze 50 oraz Metropolis Search z temperaturą początkową o wartości 50. Wynikiem są optymalne rozwiązania składające się z parametrów składu chemicznego i obróbki termicznej żeliwa ADI spełniające wymaganą normę.
+
+\section{Obszary rozwoju}
+Według mnie w pracy istnieje potencjał na dalszy rozwój każdego z opracowanych elementów. Wydaje mi się, że możliwym jest rozszerzenie zbioru danych o dodatkowe rekordy opisujące wpływ składu chemicznego i parametrów obróbki termicznej na właściwości mechaniczne żeliwa ADI. Istnieje także możliwość usprawnienia opracowanego algorytmu uzupełniania danych, który pozwoli na zbudowanie obszerniejszych zbiorów danych. 
+
+Następnym kierunkiem rozwoju mogłoby być użycie ewolucyjnych sieci neuronowych w celu zbudowania jeszcze lepszych modeli właściwości mechanicznych, co wydaje się możliwe przy użyciu rozszerzonych i uzupełnionych zbiorów danych.
+
+W przypadku optymalizacji, dobrym kierunkiem według mnie byłoby opracowanie większej liczby kryteriów np. związanych ze składem chemicznym czy właściwościami mechanicznymi (określone stosunki wytrzymałości na rozciąganie do granicy plastyczności czy wydłużenia). Następnie użycie bardziej zaawansowanych algorytmów z dziedziny algorytmów metaheurystycznych.
+

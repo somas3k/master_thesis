@@ -17,7 +17,7 @@ filled_properties = ['Rm_filled', 'Rp02_filled', 'A5_filled', 'HB_filled', 'K_fi
 
 all_cols = chemical_composition + heat_treatment + physical_properties + additional_features + filled_properties
 # df = pd.read_csv("data_with_indexes.csv")
-df = pd.read_excel("../../magisterka/zebrane-dane.xlsx", sheet_name="Dane", header=1, usecols=all_cols)
+df = pd.read_excel("../../magisterka/dataset-old.xlsx", sheet_name="Dane", header=1, usecols=all_cols)
 
 print(df.describe())
 
@@ -102,7 +102,7 @@ def calculate_correlations(df: DataFrame, left_cols, right_cols, function, detai
                 title = details + ": " + col1 + " to " + col2 + " corr: " + "{:.2f}".format(corr) + ", cnt: " + str(data.shape[0])
                 print(title)
                 data.plot.scatter(x=col1, y=col2, title=title)
-                plt.savefig("./wykresy/"+details+"_"+col1 + "_to_" + col2 + ".png")
+                plt.savefig("./old_charts/"+details+"_"+col1 + "_to_" + col2 + ".png")
                 # plt.show()
             result[col1][col2] = corr
     return result
@@ -129,7 +129,7 @@ def calculate_correlations2(df: DataFrame, cols, function, details):
                 title = details + ": " + col1 + " to " + col2 + " corr: " + "{:.2f}".format(corr) + ", cnt: " + str(data.shape[0])
                 print(title)
                 data.plot.scatter(x=col1, y=col2, title=title)
-                plt.savefig("./wykresy/"+details+"_"+col1 + "_to_" + col2 + ".png")
+                plt.savefig("./old_charts/"+details+"_"+col1 + "_to_" + col2 + ".png")
                 # plt.show()
 
             result[col1][col2] = corr

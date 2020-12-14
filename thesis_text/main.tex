@@ -1,0 +1,103 @@
+%&pdflatex
+
+\documentclass[polish,12pt,a4paper,twoside]{report}
+
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hypernat}
+\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+\usepackage{amsmath} % for implementation of the matrix environment
+\usepackage{blindtext}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage[pdftex]{graphicx} \graphicspath{{./plots/}}
+\usepackage{epstopdf} \epstopdfsetup{update} % only regenerate pdf files when eps file is newer
+\usepackage{float} % figure groups aka floats
+\usepackage{forest} % for MFS elimination tree diagram
+\usepackage[left=3.5cm, right=2.5cm]{geometry} % margins
+\usepackage[shellescape,latex]{gmp} % metapost for UMLs
+\usepackage[hidelinks]{hyperref} % ToC/LoA/LoF/LoT entries are links
+\usepackage{mathptmx} % Times New Roman like font
+\usepackage{pdfpages} % for inserting pdf as the initial pages
+\usepackage{setspace} \onehalfspacing % 1.5 line spacing
+\usepackage{subcaption}
+\usepackage{xfrac} % nice slanted fractions
+\usepackage{microtype}
+\usepackage{indentfirst}
+\usepackage[section]{placeins}
+\usepackage{xcolor}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{array}
+\usepackage{multirow}
+% \usepackage{caption}
+
+% \DeclareCaptionType{eqWithCap}[][Lista równań i wzorów]
+% \captionsetup[eqWithCap]{labelformat=empty}
+
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\captionsetup[figure]{labelfont={bf}, textfont={small}}
+\captionsetup[subfigure]{labelfont={bf}, textfont={small}}
+
+\newcommand{\bt}{\blindtext}
+\newcommand{\eps}{\varepsilon}
+%\newcommand{\rev}[1]{\textcolor{red}{#1}}
+\newcommand{\rev}[1]{#1}
+\newcommand{\T}[1]{\texttt{#1}}
+
+\SetKwInput{KwInput}{Wejście}                % Set the Input
+\SetKwInput{KwOutput}{Wyjście}              % set the Output
+\SetKwInput{KwData}{Dane}
+
+\renewcommand{\algorithmcfname}{Algorytm}
+\renewcommand{\listalgorithmcfname}{Lista algorytmów}
+
+% \algnewcommand\And{\,\textbf{and}\,}
+% \algnewcommand\Or{\,\textbf{or}\,}
+% \algnewcommand{\LineComment}[1]{\State \(\triangleright\) #1}
+
+\setlength\itemsep{-0.75em}
+
+\onehalfspacing
+\begin{document}
+
+\setlength\itemsep{-0.5em}
+\includepdf[pages={-}]{initial_pages_2.pdf} 
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\listofalgorithms
+
+\include{1-intro}
+\include{2-sota}
+\include{3-solution-methodology}
+\include{4-realization}
+\include{5-result-evaluation}
+\include{6-conclusions}
+
+% \cleardoublepage % to ensure that the page reference is correct
+% \addcontentsline{toc}{chapter}{\listfigurename}
+% \listoffigures
+
+\nocite{*} % forces bibtex to include all citations, whether or not they were referred to in the paper
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliographystyle{bib-style}
+\bibliography{bibliography}
+
+\include{attachment}
+
+
+
+\end{document}
+

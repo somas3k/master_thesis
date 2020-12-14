@@ -1,0 +1,21 @@
+
+\chapter{Wstęp}
+
+\section{Motywacja}
+Proces produkcji żeliwa ADI jest procesem wymagającym, w którym osiągnięcie dobrych właściwości materiału wiąże się z licznymi eksperymentami nim znajdzie się poprawne parametry procesu produkcji. Takie eksperymenty są bardzo kosztowne ze względu na przestawianie całej linii produkcyjnej dobierając okreśłony zestaw parametrów. Powstałe wyroby muszą spełniać także określone normy związane z ich właściwościami mechanicznymi. Podjęcie decyzji o tym, które parametry produkcji zastosować jest bardzo złożone ze względu na dużą liczbę parametrów produkcji i skoplikowane kryteria związane z ceną i jakością danego wyrobu. Do rozwiązania przedstawionych zagadnień z powodzeniem stosowne będzie użycie uczenia maszynowego w celu zamodelowania procesu produkcji oraz użycie algorytmów metaheurystycznych w celu optymalizacji kosztu i zapewnieniu wymaganej jakości.
+
+Podjęcie badań w zakresie ograniczenia liczby eksperymentów, optymalizacji kosztów i zapewnieniu wymaganej jakości, a co za tym idzie, wspomaganiem w podejmowaniu decyzji, wydało mi się na tyle interesującym zagadnieniem, że właśnie z tych względów postanowiłem wybrać ten temat pracy. Dodatkową motywacją była również możliwość użycia algorytmów uczenia maszynowego w celu zamodelowania procesu produkcyjnego.
+
+\section{Cel pracy}
+Celem pracy jest wspomaganie decyzji w odlewni żeliwa ADI (Austempered Ductile Iron), które dotyczą doboru właściwych parametrów produkcji przy zachowaniu najniższego kosztu i najwyższej jakości wyrobu. Dobór parametrów będzie odbywał się poprzez optymalizację kryteriów kosztu i jakości, która opiera się na metaheurystycznym przeszukiwaniu przestrzeni rozwiązań opisanej przez wartości parametrów produkcji. Przestrzeń rozwiązań zostanie zbudowana na podstawie zbioru danych zebranych z literatury. Ograniczenia narzucane na rozwiązania będą ewaluowane przy pomocy modeli uczenia maszynowego, które zostaną stworzone przy użyciu wspomnianego zbioru danych i będą przewidywać właściwości mechaniczne żeliwa ADI na podstawie składu chemicznego oraz parametrów obróbki termicznej. Celem pracy jest także zbadanie następujących algorytmów uczenia maszynowego: Random Forest, Multilayer Perceptron, Gradient Boosting, Ensemble Averaging. Metaheurystyczne przeszukiwanie zostanie przeprowadzone z użyciem takich algorytmów jak: Random Descent, Steepest Descent, Metropolis Search czy Tabu Search. Zostanie także stworzone środowisko z graficznym interfejsem użytkownika, pozwalające na testowanie dostępnych algorytmów optymalizacji.
+
+\section{Zawartość pracy}
+W rozdziale 'State of the art' zostały przestawione rozwiązania problemów z tym, którego podjąłem się w tej pracy. Zawarłem tam różne podejścia do tematów związanych z budowaniem systemów wspomagania decyzji, algorytmów uczenia maszynowego używanych przy przewidywaniu właściwości materiałów oraz wykorzystaniu algorytmów heurystycznych w celu optymalizacji procesu produkcji.
+
+Rozdział 'Koncepcja rozwiązania' przedstawia szczegółowy opis problemu, gdzie zdecydowałem się na stworzenie diagramu przedstawiającego w uproszeczniu proces produkcji żeliwa ADI. W następnych sekcjach tego rozdziału przedstawiłem pomysł na budowę modelu predykcyjnego, który ma za zadanie przewidywać właściwości mechaniczne żeliwa ADI na podstawie składu chemicznego wytopu oraz parametrów obróbki cieplnej. Przedstawiłem w tym rozdziale także funkcję kosztu i jakości oraz w jaki sposób można optymalizować wspomniane funkcje. Ostatnia sekcja tego rozdziału skupia się na przedstawieniu koncepcji wspomagania decyzji dotyczących wyboru konfiguracji parametrów produkcji dla których koszt będzie najniższy a jakość największa.
+
+W następnym rozdziale pt. 'Realizacja' omówiłem użyte algorytmy i narzędzia oraz przedstawiłem w kolejnych sekcjach poszczególne kroki, jakie podjąłem w celu zbudowania modeli predykcyjnych, optymalizacji oraz budowy systemu wspomagania decyzji.
+
+W rozdziale 'Ewaluacja' skupiłem się na przedstawieniu badań mających udowodnić, że zaproponowane przeze mnie rozwiązania i implementacje zostały przeprowadzone poprawnie i dały poprawne wyniki.
+
+W ostatnim rozdziale pt. 'Podsumowanie' zostały dokładnie opisane cele osiągnięte podczas pracy a także w jakich obszarach jest miejsce na dalszy rozwój tej pracy.
